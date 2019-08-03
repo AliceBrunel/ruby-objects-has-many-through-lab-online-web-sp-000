@@ -13,8 +13,8 @@ class Patient
     @@all 
   end
 
-  def new_appointment 
-    
+  def new_appointment(doctor, date)
+    Appointment.new()
   end
   
   def appointments
@@ -22,6 +22,6 @@ class Patient
   end
   
   def doctors
-    
+    self.appointments.collect {|appointment| appointment.doctor}  
   end
 end
