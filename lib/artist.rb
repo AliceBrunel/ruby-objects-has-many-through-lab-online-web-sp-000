@@ -22,5 +22,8 @@ class Artist
     self.songs << Song.new(name, self, genre)
     
   end
-
+  
+  def self.genres
+    Song.all.select {|song| song.genre}
+  end
 end
